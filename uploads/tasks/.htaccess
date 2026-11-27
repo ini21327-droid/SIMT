@@ -1,0 +1,12 @@
+# Cegah eksekusi skrip PHP atau CGI di dalam folder uploads/tasks (Spesifikasi 7.4)
+Options -Indexes -ExecCGI
+<FilesMatch "\.(php|php[0-9]|phtml|phar|pl|py|cgi|sh|bat|exe|cmd)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+

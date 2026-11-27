@@ -1,0 +1,16 @@
+# Konfigurasi sensitif (API Key Google Maps)
+config/maps_key.json
+
+# File tugas yang diunggah pengguna (pertahankan struktur folder & .htaccess)
+uploads/tasks/*
+!uploads/tasks/.htaccess
+!uploads/tasks/.gitkeep
+
+# File sistem operasi & IDE
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.log
+
